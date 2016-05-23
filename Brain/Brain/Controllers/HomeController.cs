@@ -50,24 +50,25 @@ namespace Brain.Controllers
 		[HttpPost]
 		public ActionResult Register(string txtEmail, string txtUsernameRegister, string txtPasswordRegister)
 		{
-			bool userNotExists = false;
+			bool userNotExist = false;
 
 			foreach (User user in db.Users)
 			{
-				if (user.Username != txtUsernameRegister && user.Password != txtPasswordRegister)
+				if (user.Username != txtUsernameRegister)
 				{
-					userNotExists = true;
+					userNotExist = true;
 					
 				}
 			}
-			if (userNotExists)
+			if (userNotExist)
 			{
 				User newUser = new User() {Username = txtUsernameRegister, Email = txtEmail, Password = txtPasswordRegister};
 				db.Users.Add(newUser);
+				db.SaveChanges();
 				return RedirectToAction("ManageNewUser", "Profile");
 				//here we will show them the additional info we want
 			}
-			return RedirectToAction("Index");
+			return RedirectToAction("Index","Home");
 		}
 
 
