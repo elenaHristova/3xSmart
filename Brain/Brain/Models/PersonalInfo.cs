@@ -7,12 +7,11 @@ namespace Brain.Models
 {
 	public class PersonalInfo
 	{
-		public PersonalInfo(string name, int age,string sex, int userId)
+		public PersonalInfo(string name, int age,string sex)
 		{
 			this.Name = name;
 			this.Age = age;
 			this.Sex = sex;
-			this.UserId = userId;
 		}
 		public int PersonalInfoId { get; set; }
 		//public byte[] Avatar { get; set; }

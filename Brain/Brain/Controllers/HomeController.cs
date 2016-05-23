@@ -64,6 +64,8 @@ namespace Brain.Controllers
 				User newUser = new User() {Username = txtUsernameRegister, Email = txtEmail, Password = txtPasswordRegister};
 				db.Users.Add(newUser);
 				db.SaveChanges();
+				int uid = newUser.UserId;
+				Session.Add("uid", uid);
 				return RedirectToAction("ManageNewUser", "Profile");
 				//here we will show them the additional info we want
 			}

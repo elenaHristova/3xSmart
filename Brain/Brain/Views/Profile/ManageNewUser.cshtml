@@ -1,25 +1,31 @@
-﻿
+﻿@using System.Web.UI.WebControls
+
 @{
     ViewBag.Title = "Welcome to our web app";
 }
 
-<h2>Your additional information</h2>
-<h4>We would like to know some information about your lifestyle.</h4>
+
 <div class="form-group">
-	<div class="col-md-offset-2 col-md-10">
-		@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+	<div class="col-md-offset-3 col-md-9">
+		<h2>Your additional information</h2>
+		<h4>We would like to know some information about your lifestyle.</h4>
+		@using (Html.BeginForm("SaveNewUserInfo", "Profile", FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
 		{
 			@Html.Label("Your Full Name:")
-			@Html.TextBox("txtUsernameRegister")
-			<br />
-			@Html.Label("Password")
-			@Html.Password("txtPasswordRegister")
-			<br />
-			@Html.Label("Email")
-			@Html.TextBox("txtEmail")
-			<button id="login">Login</button>
+			@Html.TextBox("fullName")
+			<br/>
+			@Html.Label("Age")
+			@Html.TextBox("age")
+			<br/>
+			@Html.Label("Sex")
+			<br/>
+			@Html.Label("Male")
+			@Html.RadioButton("gender", "male")
+			@Html.Label("Female")
+			@Html.RadioButton("gender", "female")
+			<br/>
+			<input type="submit" class="btn btn-default" value="Go"/>
 		}
-		<input type="submit" class="btn btn-default" value="Register" />
 	</div>
 </div>
 
