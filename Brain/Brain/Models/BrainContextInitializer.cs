@@ -26,11 +26,11 @@ namespace Brain.Models
 
 			List<Book> books = new List<Book>
 			{
-				new Book("Pod Igoto","Ivan Vazov",1),
-				new Book("Geracite","Elin Pelin",1),
-				new Book("Bai Ganio","Aleko",1),
-				new Book("Geracite","Elin Pelin",2),
-				new Book("Geracite","Elin Pelin",3),
+				new Book() {Title="Pod Igoto",Author="Ivan Vazov",UserId=1},
+				new Book() {Title="Geracite",Author="Elin Pelin",UserId=1},
+				new Book() {Title ="Bai Ganio", Author = "Aleko",UserId = 1},
+				new Book() {Title="Geracite",Author="Elin Pelin",UserId = 2},
+				new Book() {Title="Geracite",Author="Elin Pelin",UserId = 3}
 			};
 
 			foreach (var book in books)

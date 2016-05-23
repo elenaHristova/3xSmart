@@ -46,6 +46,30 @@ namespace Brain.Controllers
 			}
 			return Index();
 		}
-		
+
+		[HttpPost]
+		public ActionResult Register(string txtEmail, string txtUsernameRegister, string txtPasswordRegister)
+		{
+			bool userNotExists = false;
+
+			foreach (User user in db.Users)
+			{
+				if (user.Username != txtUsernameRegister && user.Password != txtPasswordRegister)
+				{
+					userNotExists = true;
+					
+				}
+			}
+			if (userNotExists)
+			{
+				User newUser = new User() {Username = txtUsernameRegister, Email = txtEmail, Password = txtPasswordRegister};
+				db.Users.Add(newUser);
+				return RedirectToAction("ManageNewUser", "Profile");
+				//here we will show them the additional info we want
+			}
+			return RedirectToAction("Index");
+		}
+
+
 	}
 }

@@ -15,5 +15,11 @@ namespace Brain.Controllers
 	        ViewBag.Id = Session["uid"];
             return View();
         }
+
+	    public ActionResult ManageNewUser()
+	    {
+		    //here we will show the info
+		    return View();
+	    }
     }
 }

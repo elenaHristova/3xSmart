@@ -36,7 +36,19 @@
 				
 				<div class="form-group">
 					<div class="col-md-offset-2 col-md-10">
-						<input type="submit" class="btn btn-default" value="Register" />
+						@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+						{
+							@Html.Label("Username")
+							@Html.TextBox("txtUsernameRegister")
+							<br />
+							@Html.Label("Password")
+							@Html.Password("txtPasswordRegister")
+							<br/>
+							@Html.Label("Email")
+							@Html.TextBox("txtEmail")
+							<button id="login">Login</button>
+						}
+						<input type="submit" class="btn btn-default" value="Register"/>
 					</div>
 				</div>
 			</div>

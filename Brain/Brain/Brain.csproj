@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201605230825583_Added ID to all classes.Designer.cs">
       <DependentUpon>201605230825583_Added ID to all classes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605231231418_Test if the constructor is a bad thing with the Book class.cs" />
+    <Compile Include="Migrations\201605231231418_Test if the constructor is a bad thing with the Book class.Designer.cs">
+      <DependentUpon>201605231231418_Test if the constructor is a bad thing with the Book class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -261,6 +265,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\ManageNewUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605230825583_Added ID to all classes.resx">
       <DependentUpon>201605230825583_Added ID to all classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605231231418_Test if the constructor is a bad thing with the Book class.resx">
+      <DependentUpon>201605231231418_Test if the constructor is a bad thing with the Book class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

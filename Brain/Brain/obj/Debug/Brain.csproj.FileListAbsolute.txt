@@ -216,3 +216,4 @@ D:\hackRuse\b\Brain\Brain\obj\Debug\Brain.Migrations.AddedIDtoallclasses.resourc
 D:\hackRuse\b\Brain\Brain\obj\Debug\Brain.csproj.GenerateResource.Cache
 D:\hackRuse\b\Brain\Brain\obj\Debug\Brain.dll
 D:\hackRuse\b\Brain\Brain\obj\Debug\Brain.pdb
+D:\hackRuse\b\Brain\Brain\obj\Debug\Brain.Migrations.TestiftheconstructorisabadthingwiththeBookclass.resources
