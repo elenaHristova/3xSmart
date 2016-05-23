@@ -9,11 +9,11 @@ namespace Brain.Models
 {
 	public class BrainContext : DbContext
 	{
-		public BrainContext():base()
-		{
-			
-		}
 		public DbSet<User> Users { get; set; }
+		public DbSet<PersonalInfo> PersonalInfo { get; set; }
+		public DbSet<Subject> Subjects { get; set; }
+		public DbSet<Book> Books { get; set; }  
+		public DbSet<Hours> Hours { get; set; }  
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
