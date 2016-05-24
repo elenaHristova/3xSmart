@@ -1,0 +1,11 @@
+﻿@model  List<Brain.Models.CategoryElement>
+@{
+    ViewBag.Title = "About";
+}
+
+<div class="col-md-offset-1 col-md-5">
+    <h2>Here are all our currently availble activies:</h2>
+
+    <ul>@Html.Raw(Brain.Models.CategoryElement.GetHtmlListString(Model))</ul>
+
+</div>

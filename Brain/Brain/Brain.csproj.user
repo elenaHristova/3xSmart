@@ -9,6 +9,7 @@
     <WebStackScaffolding_DbContextTypeFullName>Brain.Models.BrainContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
