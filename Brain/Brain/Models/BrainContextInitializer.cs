@@ -59,9 +59,9 @@ namespace Brain.Models
 
 			List<PersonalInfo> personalInfos = new List<PersonalInfo>
 			{
-				new PersonalInfo("Petur Stoqnov",20,"male") {UserId = 1},
-				new PersonalInfo("Petya Koleva", 24,"female"){UserId = 2},
-				new PersonalInfo("Nikolay Lechev",34,"male"){UserId = 3},
+				new PersonalInfo("Petur Stoqnov",20,"male",1),
+				new PersonalInfo("Petya Koleva", 24,"female",2),
+				new PersonalInfo("Nikolay Lechev",34,"male",3),
 			};
 
 			foreach (var pi in personalInfos)

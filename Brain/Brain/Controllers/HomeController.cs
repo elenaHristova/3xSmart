@@ -44,32 +44,30 @@ namespace Brain.Controllers
 			{
 				return RedirectToAction("Index", "Profile");
 			}
-			else { return RedirectToAction("Index"); }
+			return Index();
 		}
 
 		[HttpPost]
 		public ActionResult Register(string txtEmail, string txtUsernameRegister, string txtPasswordRegister)
 		{
-			bool userNotExist = true;
+			bool userNotExists = false;
 
 			foreach (User user in db.Users)
 			{
-				if (user.Username == txtUsernameRegister)
+				if (user.Username != txtUsernameRegister && user.Password != txtPasswordRegister)
 				{
-					userNotExist = false;
+					userNotExists = true;
+					
 				}
 			}
-			if (userNotExist)
+			if (userNotExists)
 			{
 				User newUser = new User() {Username = txtUsernameRegister, Email = txtEmail, Password = txtPasswordRegister};
 				db.Users.Add(newUser);
-				db.SaveChanges();
-				int uid = newUser.UserId;
-				Session.Add("uid", uid);
 				return RedirectToAction("ManageNewUser", "Profile");
 				//here we will show them the additional info we want
 			}
-			else { return RedirectToAction("Index");}
+			return RedirectToAction("Index");
 		}
 
 
