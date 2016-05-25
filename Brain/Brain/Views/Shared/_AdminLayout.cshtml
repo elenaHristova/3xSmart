@@ -7,9 +7,24 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>My Porfile</title>
-	@Styles.Render("~/AdminContent/css")
-	@Styles.Render("~/AdminContent/css1")
-	@Styles.Render("~/AdminContent/css2")
+	<!-- Bootstrap Core CSS -->
+	<link href="~/Views/Shared/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- MetisMenu CSS -->
+	<link href="~/Views/Shared/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+	<!-- Timeline CSS -->
+	<link href="~/Views/Shared/dist/css/timeline.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="~/Views/Shared/dist/css/sb-admin-2.css" rel="stylesheet">
+
+	<!-- Morris Charts CSS -->
+	<link href="~/Views/Shared/bower_components/morrisjs/morris.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="~/Views/Shared/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -277,17 +292,16 @@
 							<!-- /.nav-second-level -->
 						</li>
 						<li>
-							@Html.ActionLink("My Graphics", "Index", "Chart", new { area = "" })
-							
+							<a area="" href="/Chart/Index">My Graphics</a>
 							<ul class="nav nav-second-level">
 								<li>
-									@Html.ActionLink("Productivity", "Index", "Profile", new {area = ""})
+									@Html.ActionLink("Productivity", "Index", "Profile")
 								</li>
 								<li>
-									@Html.ActionLink("Self-improvemrnt", "Index", "Profile", new {area = ""})
+									@Html.ActionLink("Self-improvemrnt", "Index", "Profile", new { area = "" })
 								</li>
 								<li>
-									@Html.ActionLink("Achievements", "Index", "Profile", new {area = ""})
+									@Html.ActionLink("Achievements", "Index", "Profile", new { area = "" })
 								</li>
 							</ul>
 							<!-- /.nav-second-level -->
@@ -304,28 +318,28 @@
 			</div>
 			<!-- /.navbar-static-side -->
 		</nav>
-	<div id="page-wrapper">
-	@RenderBody()
-	
-	</div>
+		<div id="page-wrapper">
+			@RenderBody()
+
+		</div>
 		<!-- /#page-wrapper -->
 	</div>
 	<!-- /#wrapper -->
-<!-- jQuery -->
-	@Scripts.Render("~/Scripts/Admin/js")
+	<!-- jQuery -->
+	@*@Scripts.Render("~/Scripts/Admin/js")
 	@Scripts.Render("~/Scripts/Admin/js1")
 	@Scripts.Render("~/Scripts/Admin/js2")
-	@Scripts.Render("~/Scripts/Admin/js3")
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	@Scripts.Render("~/Scripts/Admin/js3")*@
+	<script src="~/Views/Shared/bower_components/jquery/dist/jquery.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/Views/Shared/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<!-- Metis Menu Plugin JavaScript -->
-	<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	<script src="~/Views/Shared/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 	<!-- Morris Charts JavaScript -->
-	<script src="bower_components/raphael/raphael-min.js"></script>
-	<script src="bower_components/morrisjs/morris.min.js"></script>
-	<script src="js/morris-data.js"></script>
+	<script src="~/Views/Shared/bower_components/raphael/raphael-min.js"></script>
+	<script src="~/Views/Shared/bower_components/morrisjs/morris.min.js"></script>
+	<script src="~/Views/Shared/js/morris-data.js"></script>
 	<!-- Custom Theme JavaScript -->
-	<script src="dist/js/sb-admin-2.js"></script>
+	<script src="~/Views/Shared/dist/js/sb-admin-2.js"></script>
 </body>
 </html>
