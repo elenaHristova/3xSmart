@@ -22,10 +22,36 @@ namespace Brain
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
 					  "~/Scripts/bootstrap.js",
 					  "~/Scripts/respond.js"));
+			//customAddedJS
+			bundles.Add(new ScriptBundle("~/Scripts/Admin/js").Include(
+						"~/Scripts/Admin/bootstrap.min.js",
+						"~/Scripts/Admin/jquery.min.js"));
+
+			bundles.Add(new ScriptBundle("~/Scripts/Admin/js1").Include(
+						"~/Scripts/Admin/metisMenu.min.js",
+						"~/Scripts/Admin/morris-data.js"));
+
+			bundles.Add(new ScriptBundle("~/Scripts/Admin/js2").Include(
+						"~/Scripts/Admin/morris.min.js",
+						"~/Scripts/Admin/raphael-min.js"));
+
+			bundles.Add(new ScriptBundle("~/Scripts/Admin/js3").Include(
+						"~/Scripts/Admin/sb-admin-2.js"));
+			
+			//
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
 					  "~/Content/site.css"));
+			bundles.Add(new StyleBundle("~/AdminContent/css").Include(
+					  "~/AdminContent/bootstrap.css",
+					  "~/AdminContent/metisMenu.css"));
+			bundles.Add(new StyleBundle("~/AdminContent/css1").Include(
+					  "~/AdminContent/sb-admin-2.css",
+					  "~/AdminContent/timeline.css"));
+			bundles.Add(new StyleBundle("~/AdminContent/css2").Include(
+					  "~/AdminContent/morris.css",
+					  "~/AdminContent/font-awsome.min.css"));
 		}
 	}
 }
